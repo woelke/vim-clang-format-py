@@ -11,7 +11,7 @@ Install this plugin with your favorite plugin-manager or manual with the followi
 
 
 ## Requirements
-Your vim must support Python 3, which can simply be checked in vim by the commands
+Your vim must support Python 3, which can be checked in vim by the commands
 
     :version
     :py3 rint("test")
