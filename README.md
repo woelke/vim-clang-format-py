@@ -1,4 +1,4 @@
-## Clang-format.py wrapper
+## Clang-format.py Wrapper
 This plugin wraps the file [clang-format.py](https://github.com/llvm-mirror/clang/blob/master/tools/clang-format/clang-format.py) and can now be used with plugin manager tools like [Vundle](https://github.com/VundleVim/Vundle.vim) or [vim-plug](https://github.com/junegunn/vim-plug).
 
 Why not using [vim-clang-format](https://github.com/rhysd/vim-clang-format) or [vim-autoformat](https://github.com/Chiel92/vim-autoformat) instead of wrap a python script.
