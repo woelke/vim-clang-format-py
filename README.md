@@ -1,28 +1,33 @@
-## old old old
-## My Spellfiles 
-This plugin encapsulate my custom spellfiles. I needed a solution so synchronise my spellfile and this is the result.
-The plugin creates softlinks form the synchronised spellfile in the plugin folder to the ~/.vim/spell/ directory. After adding a new word the plugin directory musst unfortunately be pushed manually, but can be pulled on an other computer with the plugin-manager.
+## Clang-format.py wrapper
+This plugin wraps the file [clang-format.py](https://github.com/llvm-mirror/clang/blob/master/tools/clang-format/clang-format.py) and can now be used with plugin manager tools like [Vundle](https://github.com/VundleVim/Vundle.vim) or [vim-plug](https://github.com/junegunn/vim-plug).
 
-Why not with Dropbox?
-
-    Because Dropbox sucks!
+Why not using [vim-clang-format](https://github.com/rhysd/vim-clang-format) or [vim-autoformat](https://github.com/Chiel92/vim-autoformat) instead of wrap a python script.
+Because both tools wipes the jump list, which makes the usage feel like a torment.
 
 ## Install
 Install this plugin with your favorite plugin-manager or manual with the following commands:
     
-    git clone https://github.com/aufgang001/vim-custom_spellfile.git  ~/.vim/vim-custom_spellfile.git
-    ~/.vim/vim-custom_spellfile.git/intall.sh
-    
+    git clone https://github.com/aufgang001/vim-clang-format-py.git  ~/.vim/vim-clang-format-py.git
+
+
+## Requirements
+Your vim must support Python 3, which can simply be checked in vim by the commands
+
+    :version
+    :py3 rint("test")
+
+You have to install clang-format. For example with the command:
+
+    sudo apt-get install clang-format-3.8
+
+Add the following line to your .vimrc file:
+
+    let g:clang_format_path = "clang-format-3.8"
+
+Finally, bind the new command *ClangFormat* to a key:
+
+    noremap <F12> :ClangFormat<CR>
+
 
 ## Usage
-Add a word with zg shortcut to the spellfile. You will get a reminder to upload the spellfile. Go to the plugin directory and push it.
-
-## Usefull shortcuts
-    
-    zg - add a word to the spellfile
-    zug - undo zg
-    zw - mark a wrong word.
-    zuw - undo zw
-    zc - clean the spellfile form comments
-    zs - sort the spellfile alphabetical
-    zr - refresh the wordlist (after a pull)
+Mark a block of code or position the cursor to a specific line and enter your previously defined shortcut.
