@@ -14,7 +14,7 @@ Install this plugin with your favorite plugin-manager or manual with the followi
 Your vim must support Python 3, which can be checked in vim by the commands
 
     :version
-    :py3 rint("test")
+    :python3 print("test")
 
 You have to install clang-format. For example with the command:
 
